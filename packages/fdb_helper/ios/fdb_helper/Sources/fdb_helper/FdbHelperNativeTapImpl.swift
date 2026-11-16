@@ -2,6 +2,9 @@ import Flutter
 import UIKit
 
 #if FDB_HELPER_NATIVE_TAP_REAL
+#if SWIFT_PACKAGE
+import FdbHelperNativeTap
+#endif
 
 /// Injects a synthetic in-process tap or long-press at the given Flutter logical
 /// coordinates by delegating to the ObjC implementation in

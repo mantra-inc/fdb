@@ -30,3 +30,4 @@ logs/*
 
 # FVM Version Cache
 .fvm/
+**/.build/

@@ -1,3 +1,4 @@
+#if FDB_HELPER_NATIVE_TAP_REAL
 // See FdbHelperNativeTap.h for rationale.
 //
 // Closely mirrors KIF v3.12.2's tap injection (Sources/KIF/Additions/
@@ -482,3 +483,5 @@ BOOL FdbHelperNativeLongPressAtPoint(CGPoint point, NSTimeInterval durationSecon
 
   return YES;
 }
+
+#endif
