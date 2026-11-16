@@ -5,10 +5,14 @@ let package = Package(
     name: "fdb_helper",
     platforms: [.iOS("13.0")],
     products: [.library(name: "fdb-helper", targets: ["fdb_helper"])],
+    dependencies: [.package(name: "FlutterFramework", path: "../FlutterFramework")],
     targets: [
         .target(
             name: "fdb_helper",
-            dependencies: ["FdbHelperNativeTap"],
+            dependencies: [
+                "FdbHelperNativeTap",
+                .product(name: "FlutterFramework", package: "FlutterFramework")
+            ],
             swiftSettings: [.define("FDB_HELPER_NATIVE_TAP_REAL", .when(configuration: .debug))]
         ),
         .target(
